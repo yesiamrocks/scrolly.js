@@ -1,26 +1,23 @@
 /**
- * scrolly.js v1.0.0
+ * scrolly.js
+ * Current Version: 1.0.0
  * http://www.scrollyjs.com
+ * 
+ * Title: "A Animation Library for Developers and Ninjas"
  *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2013, Codrops
- * http://www.scrollyjs.com
- */
+ * Github: https://github.com/yesiamrocks/scrolly.js
+ * 
+ * Copyright (c) 2017 Pavel
+ * License: scrolly.js is licensed under the MIT license
+ **/
 
-
-
-
-(function () {
-
+(function() {
 
     var OSName = "Unknown";
     if (window.navigator.userAgent.indexOf("Windows") != -1) OSName = "Windows";
     else if (window.navigator.userAgent.indexOf("Mac") != -1) OSName = "Mac";
     //else if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
     //else if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
-
 
     // checking browser is Internet Explore
     var isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
@@ -40,16 +37,15 @@
     var displayCss = ' -webkit-animation-fill-mode: both; visibility: visible;';
     var defaultClickCss = ' visibility: visible; -webkit-animation-duration: 1s; display:block;-webkit-animation-fill-mode: both; ';
 
-
     var settingOptions = {
         selectorClass: 'scrolly',
         dataClickElm: 'data-scrolly-click',
         dataMouseoverElm: 'data-scrolly-mouseover',
         dataMouseoutElm: 'data-scrolly-mouseout',
         dataSelectorIn: 'data-scrolly-top',
-        dataSelectorOut: 'data-scrolly-bottom',
+        dataSelectorOut: 'data-scrolly-down',
         dataScrollyInDelay: 'data-scrolly-top-delay',
-        dataScrollyOutDelay: 'data-scrolly-bottom-delay',
+        dataScrollyOutDelay: 'data-scrolly-down-delay',
         dataScrollyOffsetTop: 'data-scrolly-offset-top',
         dataScrollyOffsetBottom: 'data-scrolly-offset-bottom',
         dataCharacterAnimate: 'data-scrolly-characters',
@@ -65,22 +61,22 @@
         /****** settingOptins for resize view screen  ******/
 
         scrollyOffsetTop: 0, //Setting Default Offset Top Value
-        scrollyOffsetBottom: 0,       //Setting Default Offset Bottom Value
+        scrollyOffsetBottom: 0, //Setting Default Offset Bottom Value
 
         /****** settingOptins for resize view screen depend on OS  ******/
-        scrollyMacOffsetTop: 0,         //Setting Offset Top Value for MAC
-        scrollyMacOffsetBottom: 0,      //Setting Offset Bottom Value for MAC
-        scrollyWindowsOffsetTop: 0,     //Setting Offset Top Value for Windows
-        scrollyWindowsOffsetBottom: 0,  //Setting Offset Bottom Value for Windows
+        scrollyMacOffsetTop: 0, //Setting Offset Top Value for MAC
+        scrollyMacOffsetBottom: 0, //Setting Offset Bottom Value for MAC
+        scrollyWindowsOffsetTop: 0, //Setting Offset Top Value for Windows
+        scrollyWindowsOffsetBottom: 0, //Setting Offset Bottom Value for Windows
 
-        scrollyTabOffsetTop: 0,      //Setting Offset Top Value for Tab
-        scrollyTabOffsetBottom: 0,      //Setting Offset Bottom Value for Tab
+        scrollyTabOffsetTop: 0, //Setting Offset Top Value for Tab
+        scrollyTabOffsetBottom: 0, //Setting Offset Bottom Value for Tab
 
-        scrollyMobileOffsetTop: 0,   //Setting Offset Top Value for Mobile
-        scrollyMobileOffsetBottom: 0,   //Setting Offset Bottom Value for Mobile
+        scrollyMobileOffsetTop: 0, //Setting Offset Top Value for Mobile
+        scrollyMobileOffsetBottom: 0, //Setting Offset Bottom Value for Mobile
 
-        scrollyDisable: false,  //There are several options that you can use to disable scrolly on certains devices.
-        scrollyAnimationCssRemove: false,  // scrolly animation css remove from html tag if its true
+        scrollyDisable: false, //There are several options that you can use to disable scrolly on certains devices.
+        scrollyAnimationCssRemove: false, // scrolly animation css remove from html tag if its true
 
         /****** default screen resulation work across multiple devices  ******/
         scrollyScreen: {
@@ -110,7 +106,7 @@
         }
     };
 
-    this.isInView = function (box) {
+    this.isInView = function(box) {
         var bottom, top, viewBottom, viewTop;
         viewTop = window.pageYOffset;
         viewBottom = viewTop + window.innerHeight;
@@ -142,7 +138,7 @@
     }
 
     // Make Style which is written in data-attribute
-    this.makeStyle = function (data, direction) {
+    this.makeStyle = function(data, direction) {
         var animationCss = '';
         if ((data !== null) && (data !== '')) {
             var splitData = data.trim().split(",");
@@ -190,7 +186,7 @@
     };
 
     // checking element is in active window
-    this.isHidden = function (elm) {
+    this.isHidden = function(elm) {
         if ((elm.getAttribute("style") !== null) && (elm.getAttribute("style").trim() == hiddenCss.trim())) {
             return true;
         }
@@ -199,7 +195,7 @@
 
 
     // checking element is in active window when scrolling
-    this.animationStart = function () {
+    this.animationStart = function() {
         if (settingOptions.scrollyDisable === true) {
             return 0;
         }
@@ -224,16 +220,17 @@
         }
     };
 
-    this.hasClass = function (element, cls) {
+    this.hasClass = function(element, cls) {
         return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
     };
 
 
-    var selector = {}, sCount = 0;
+    var selector = {},
+        sCount = 0;
     var screenWidth = screen.width;
 
     // checkScreenForAnimation for checking for screen resulation
-    this.checkScreenForAnimation = function () {
+    this.checkScreenForAnimation = function() {
         if ((settingOptions.scrollyStopIt.mobile) && ((screenWidth >= parseInt(settingOptions.scrollyScreen.mobile.minWidth)) && (screenWidth <= parseInt(settingOptions.scrollyScreen.mobile.maxWidth)))) {
             settingOptions.scrollyDisable = true;
             this.resetWindow();
@@ -251,7 +248,7 @@
         }
     };
 
-    this.initOptions = function (custom, defaults) {
+    this.initOptions = function(custom, defaults) {
         var key, value;
         for (key in defaults) {
             value = defaults[key];
@@ -264,7 +261,7 @@
 
 
     // Initialize css animation tag and map all event and css style
-    this.scrolly = function (options) {
+    this.scrolly = function(options) {
 
         if (options) {
             settingOptions = this.initOptions(options, settingOptions);
@@ -369,14 +366,6 @@
 
         if (clickElmCount) {
             for (var clickElmIndex = 0; clickElmIndex < clickElmCount; clickElmIndex++) {
-                /*
-                 var dataclickElmScrollyTarget = clickElm[clickElmIndex].getAttribute(settingOptions.dataScrollyTarget);
-                 if(dataclickElmScrollyTarget){
-                 clickElm[clickElmIndex].addEventListener("click", this.scrollyAnimationClick);
-                 }else {
-                 clickElm[clickElmIndex].addEventListener("click", this.cssAnimationClick);
-                 }
-                 */
                 clickElm[clickElmIndex].addEventListener("click", this.cssAnimationClick);
                 if (!this.hasClass(clickElm[clickElmIndex], settingOptions.selectorClass)) {
                     clickElm[clickElmIndex].className += " " + settingOptions.selectorClass;
@@ -390,14 +379,6 @@
 
         if (mouseOverElmCount) {
             for (var mouseOverElmIndex = 0; mouseOverElmIndex < mouseOverElmCount; mouseOverElmIndex++) {
-                /*
-                 var dataMouseOverScrollyTarget = mouseOverElm[mouseOverElmIndex].getAttribute(settingOptions.dataScrollyTarget);
-                 if(dataMouseOverScrollyTarget){
-                 mouseOverElm[mouseOverElmIndex].addEventListener("mouseout", this.scrollyAnimationClick);
-                 }else {
-                 mouseOverElm[mouseOverElmIndex].addEventListener("mouseover", this.cssAnimationMouseOver);
-                 }
-                 */
                 mouseOverElm[mouseOverElmIndex].addEventListener("mouseover", this.cssAnimationMouseOver);
                 if (!this.hasClass(mouseOverElm[mouseOverElmIndex], settingOptions.selectorClass)) {
                     mouseOverElm[mouseOverElmIndex].className += " " + settingOptions.selectorClass;
@@ -410,14 +391,6 @@
         var mouseOutElmCount = mouseOutElm.length;
         if (mouseOutElmCount) {
             for (var mouseOutElmCountIndex = 0; mouseOutElmCountIndex < mouseOutElmCount; mouseOutElmCountIndex++) {
-                /*
-                 var dataMouseOutScrollyTarget = mouseOutElm[mouseOutElmCountIndex].getAttribute(settingOptions.dataScrollyTarget);
-                 if(dataMouseOutScrollyTarget){
-                 mouseOutElm[mouseOutElmCountIndex].addEventListener("mouseout", this.scrollyAnimationClick);
-                 }else {
-                 mouseOutElm[mouseOutElmCountIndex].addEventListener("mouseout", this.cssAnimationMouseOut);
-                 }
-                 */
                 mouseOutElm[mouseOutElmCountIndex].addEventListener("mouseout", this.cssAnimationMouseOut);
 
                 if (!this.hasClass(mouseOutElm[mouseOutElmCountIndex], settingOptions.selectorClass)) {
@@ -559,21 +532,20 @@
         }
 
         // detect scroll and animation start
-        window.onscroll = function () {
+        window.onscroll = function() {
             animationStart();
         };
 
-        // window.addEventListener('resize', scrolly(options), false);
-
-
-        window.addEventListener('resize', function () {
+        window.addEventListener('resize', function() {
             this.checkScreenForAnimation();
         });
     };
 
     // make a random array
-    this.shuffle = function (array) {
-        var i = array.length, j = 0, temp;
+    this.shuffle = function(array) {
+        var i = array.length,
+            j = 0,
+            temp;
         while (i--) {
             j = Math.floor(Math.random() * (i + 1));
             temp = array[i];
@@ -587,7 +559,7 @@
     var dataScrollyOutDelayTimer = false;
 
     // show the element and css animation which is in active window
-    this.showElement = function (elmIndex) {
+    this.showElement = function(elmIndex) {
         if (this.isHidden(selector[elmIndex])) {
             var isCharacterAnimate = selector[elmIndex].getAttribute(settingOptions.dataCharacterAnimate);
             if (topToBottom) {
@@ -598,7 +570,7 @@
                         clearTimeout(dataScrollyOutDelayTimer);
                         dataScrollyOutDelayTimer = false;
                     }
-                    dataScrollyInDelayTimer = setTimeout(function () {
+                    dataScrollyInDelayTimer = setTimeout(function() {
                         if (isCharacterAnimate) {
                             selector[elmIndex].style.cssText = displayCss + tagStyleMap[elmIndex] + characterCss;
                             if (!this.hasClass(selector[elmIndex], characterAnimateInClassMap[elmIndex])) {
@@ -628,7 +600,7 @@
                         clearTimeout(dataScrollyInDelayTimer);
                         dataScrollyInDelayTimer = false;
                     }
-                    dataScrollyOutDelayTimer = setTimeout(function () {
+                    dataScrollyOutDelayTimer = setTimeout(function() {
                         if (isCharacterAnimate) {
                             selector[elmIndex].style.cssText = displayCss + tagStyleMap[elmIndex] + characterCss;
                             if (!this.hasClass(selector[elmIndex], characterAnimateOutClassMap[elmIndex])) {
@@ -655,7 +627,7 @@
 
     };
 
-    this.resetWindow = function () {
+    this.resetWindow = function() {
         if (sCount) {
             for (var i = 0; i < sCount; i++) {
                 selector[i].style.cssText = tagStyleMap[i];
@@ -664,7 +636,7 @@
     };
 
     // hide the element and style remove which is not in active window
-    this.clearStyle = function (elmIndex) {
+    this.clearStyle = function(elmIndex) {
         var isCharacterAnimate = selector[elmIndex].getAttribute(settingOptions.dataCharacterAnimate);
         selector[elmIndex].style.cssText = hiddenCss;
         if (isCharacterAnimate) {
@@ -672,18 +644,20 @@
         }
     };
 
-    this.getScroll = function () {
+    this.getScroll = function() {
         if (window.pageYOffset != undefined) {
             return pageYOffset;
         } else {
-            var sx, sy, d = document, r = d.documentElement, b = d.body;
+            var sx, sy, d = document,
+                r = d.documentElement,
+                b = d.body;
             sx = r.scrollLeft || b.scrollLeft || 0;
             sy = r.scrollTop || b.scrollTop || 0;
             return sy;
         }
     };
 
-    this.offsetTop = function (element) {
+    this.offsetTop = function(element) {
         var top;
         while (element.offsetTop === void 0) {
             element = element.parentNode;
@@ -696,7 +670,7 @@
     };
 
     // css animation for Scrolly target event
-    var scrollyAnimationTarget = function () {
+    var scrollyAnimationTarget = function() {
 
         var clickTag = this;
 
@@ -734,7 +708,7 @@
         }
 
 
-        setTimeout(function () {
+        setTimeout(function() {
             thisElm.style.cssText = thisAttrStyle + defaultClickCss + ' animation-name: ' + clickEvnCssName + ';';
         }, 0);
 
@@ -742,8 +716,9 @@
     };
 
     // get object length
-    Object.size = function (obj) {
-        var size = 0, key;
+    Object.size = function(obj) {
+        var size = 0,
+            key;
         for (key in obj) {
             if (obj.hasOwnProperty(key)) size++;
         }
@@ -752,7 +727,7 @@
 
 
     // remove animation style from inline style and set tag inline style
-    this.cssAnimtionEnd = function () {
+    this.cssAnimtionEnd = function() {
         var thisTag = this;
         var thisIndex = parseInt(thisTag.getAttribute(settingOptions.dataScrollyIndex));
         thisTag.removeAttribute('style');
@@ -761,42 +736,33 @@
         }
     };
 
-
     // css animation for click
-    this.cssAnimationClick = function () {
+    this.cssAnimationClick = function() {
         var clickTag = this;
         var clickEvnCssName = clickTag.getAttribute(settingOptions.dataClickElm).trim();
         clickTag.removeAttribute('style');
-        setTimeout(function () {
+        setTimeout(function() {
             clickTag.style.cssText = defaultClickCss + ' animation-name: ' + clickEvnCssName + ';';
         }, 0);
     };
 
     // css animation for mouseover
-    this.cssAnimationMouseOver = function () {
+    this.cssAnimationMouseOver = function() {
         var clickTag = this;
         var clickEvnCssName = clickTag.getAttribute(settingOptions.dataMouseoverElm).trim();
         clickTag.removeAttribute('style');
-        setTimeout(function () {
+        setTimeout(function() {
             clickTag.style.cssText = defaultClickCss + ' animation-name: ' + clickEvnCssName + ';';
         }, 0);
     };
 
     // css animation for mouseout
-    this.cssAnimationMouseOut = function () {
+    this.cssAnimationMouseOut = function() {
         var clickTag = this;
         var clickEvnCssName = clickTag.getAttribute(settingOptions.dataMouseoutElm).trim();
         clickTag.removeAttribute('style');
-        setTimeout(function () {
+        setTimeout(function() {
             clickTag.style.cssText = defaultClickCss + ' animation-name: ' + clickEvnCssName + ';';
         }, 0);
     };
-
-
-    // checking for has any css animation tag
-    // if (dataInElmCount || dataOutElmCount || clickElmCount || mouseOverElmCount || mouseOutElmCount) {
-    //     // initialize css animation tag and event
-    //     this.initialize();
-    // }
-
 }());
