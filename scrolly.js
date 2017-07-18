@@ -1,12 +1,8 @@
 /**
  * scrolly.js
- * Current Version: 1.0.0
+ * Current Version: 1.0.1
  * http://www.scrollyjs.com
- * 
- * Title: "A Animation Library for Developers and Ninjas"
- *
  * Github: https://github.com/yesiamrocks/scrolly.js
- * 
  * Copyright (c) 2017 Pavel
  * License: scrolly.js is licensed under the MIT license
  **/
@@ -565,7 +561,7 @@
             if (topToBottom) {
                 // delay element show
                 if (selector[elmIndex].getAttribute(settingOptions.dataScrollyOutDelay)) {
-                    var timeInTime = parseInt(selector[elmIndex].getAttribute(settingOptions.dataScrollyOutDelay)) * 1000;
+                    var timeInTime = parseFloat(selector[elmIndex].getAttribute(settingOptions.dataScrollyOutDelay)) * 1000;
                     if (dataScrollyOutDelayTimer) {
                         clearTimeout(dataScrollyOutDelayTimer);
                         dataScrollyOutDelayTimer = false;
@@ -595,7 +591,7 @@
             } else {
                 // delay element show
                 if (selector[elmIndex].getAttribute(settingOptions.dataScrollyInDelay)) {
-                    var timeOutTime = parseInt(selector[elmIndex].getAttribute(settingOptions.dataScrollyInDelay)) * 1000;
+                    var timeOutTime = parseFloat(selector[elmIndex].getAttribute(settingOptions.dataScrollyInDelay)) * 1000;
                     if (dataScrollyInDelayTimer) {
                         clearTimeout(dataScrollyInDelayTimer);
                         dataScrollyInDelayTimer = false;
