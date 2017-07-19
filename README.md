@@ -46,3 +46,24 @@ We developed the most easier way to work with scroll animation, Just use `data-s
 </body>
 </html>
 ```
+
+# Why Scrolly.js
+Scrolly JS is efficient and flexible JavaScript library for building an interactive and attractive animation with scrolling. Fully responsive, lightweight, powerful and flexible pure JavaScript scroll animation library.
+
+### Animated by CSS
+Your imagination can be real. Just imagine and implement your own animation effect with this platform.
+
+### Flexibility and extendibility
+Easy-going installation and flexible scroll animation library that have insignificant production time. The platform is developer friendly and extendable.
+
+### Support for responsive
+This is 100% responsive and ready for all devices with any screen resolutions.
+
+### Lightweight
+Just a 12KB file which is really lightweight to use any of your projects.
+
+###Easy to use
+A Very easiest scroll animation library which has extensive features to build any scroll animation as you want.
+
+### No dependency
+Plug and play and ready to implement. No dependency with any third party JavaScript plugin, framework or library.
