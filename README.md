@@ -6,6 +6,27 @@ Scrolly.js plugin is proudly created and maintained by [cssanimation.io](http://
 
 We developed the most easier way to work with scroll animation, Just use `data-scrolly-top` and `data-scrolly-down` attribute to quickly build powerful templates of your own.
 
+# Why Scrolly.js
+Scrolly JS is efficient and flexible JavaScript library for building an interactive and attractive animation with scrolling. Fully responsive, lightweight, powerful and flexible pure JavaScript scroll animation library.
+
+### Animated by CSS
+Your imagination can be real. Just imagine and implement your own animation effect with this platform.
+
+### Flexibility and extendibility
+Easy-going installation and flexible scroll animation library that have insignificant production time. The platform is developer friendly and extendable.
+
+### Support for responsive
+This is 100% responsive and ready for all devices with any screen resolutions.
+
+### Lightweight
+Just a 12KB file which is really lightweight to use any of your projects.
+
+### Easy to use
+A Very easiest scroll animation library which has extensive features to build any scroll animation as you want.
+
+### No dependency
+Plug and play and ready to implement. No dependency with any third party JavaScript plugin, framework or library.
+
 
 # How To Use It?
 **Include Library:** To get started, just download `scrolly.js` and `cssanimation.css` [download](http://cssanimation.io/). Now include the `cssanimation.css` stylesheet into the head and add `scrolly.js` scripts before the `body` tag
@@ -46,24 +67,3 @@ We developed the most easier way to work with scroll animation, Just use `data-s
 </body>
 </html>
 ```
-
-# Why Scrolly.js
-Scrolly JS is efficient and flexible JavaScript library for building an interactive and attractive animation with scrolling. Fully responsive, lightweight, powerful and flexible pure JavaScript scroll animation library.
-
-### Animated by CSS
-Your imagination can be real. Just imagine and implement your own animation effect with this platform.
-
-### Flexibility and extendibility
-Easy-going installation and flexible scroll animation library that have insignificant production time. The platform is developer friendly and extendable.
-
-### Support for responsive
-This is 100% responsive and ready for all devices with any screen resolutions.
-
-### Lightweight
-Just a 12KB file which is really lightweight to use any of your projects.
-
-###Easy to use
-A Very easiest scroll animation library which has extensive features to build any scroll animation as you want.
-
-### No dependency
-Plug and play and ready to implement. No dependency with any third party JavaScript plugin, framework or library.
