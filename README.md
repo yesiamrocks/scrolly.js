@@ -20,7 +20,7 @@ We developed the most easier way to work with scroll animation, Just use `data-s
 <body> 
  
 
-    <script type="text/javascript" src="scrolly/scrolly.js">
+    <script type="text/javascript" src="scrolly/scrolly.js"></script>
 </body>
 </html>
 ```
