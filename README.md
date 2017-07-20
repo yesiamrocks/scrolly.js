@@ -7,7 +7,7 @@ Scrolly.js plugin is proudly created and maintained by [cssanimation.io](http://
 We developed the most easier way to work with scroll animation, Just use `data-scrolly-top` and `data-scrolly-down` attribute to quickly build powerful templates of your own.
 
 # How To Use It?
-#### Include Library
+### Include Library
 To get started, just download `scrolly.js` and `cssanimation.css` [download](http://cssanimation.io/). Now include the `cssanimation.css` stylesheet into the head and add `scrolly.js` scripts before the `body` tag
 ``` html
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ To get started, just download `scrolly.js` and `cssanimation.css` [download](htt
 </html>
 ```
 
-#### Activate Now
+### Activate Now
 when done with including stuff, time to activate scrolly.js
 ``` html
 <!DOCTYPE html>
@@ -49,7 +49,7 @@ when done with including stuff, time to activate scrolly.js
 ```
 
 
-#### Define DOWN Animation
+### Define DOWN Animation
  Once you've done that, define animation class name in `data-scrolly-down` attribute like the example below to the element **that you want to animate when the page scroll to DOWN**. here we are using `blurInTop`.
 
 ``` html
@@ -76,7 +76,7 @@ when done with including stuff, time to activate scrolly.js
 </html>
 ```
 
-#### Define TOP Animation
+### Define TOP Animation
 Like the DOWN animation, to animate element **while scrollig to TOP**, just use `data-scrolly-top` attribute and add whatever animation you want. We used `blurInBottom` for example.
 
 ``` html
@@ -103,7 +103,7 @@ Like the DOWN animation, to animate element **while scrollig to TOP**, just use 
 </html>
 ```
 
-#### Use Both DOWN and TOP Animation
+### Use Both DOWN and TOP Animation
 You can also trigger an animation effect in any given element from both **DOWN & TOP**, means it will animate on both scrolling **DOWN & TOP**. See the example below-
 
 ``` html
@@ -130,7 +130,7 @@ You can also trigger an animation effect in any given element from both **DOWN &
 </html>
 ```
 
-#### Use Animation on Character
+### Use Animation on Character
 Yes!! you can now animate each character of any sentences while you scroll. Add `data-scrolly-characters="sequential"` for sequential animation of the characters or `data-scrolly-characters="random"` if you want it to animate it in random order.... **isn't it exciting !!**
 ``` html
 <!DOCTYPE html>
@@ -160,7 +160,7 @@ Yes!! you can now animate each character of any sentences while you scroll. Add 
 </html>
 ```
 
-#### Add Delay in Character Animation
+### Add Delay in Character Animation
 You can add dealy on character animation by adding `data-scrolly-characters="delay:100"` attribute.
 ``` html
 <!DOCTYPE html>
@@ -190,7 +190,7 @@ You can add dealy on character animation by adding `data-scrolly-characters="del
 </html>
 ```
 
-#### Use Animation Duration
+### Use Animation Duration
 Default animation duration is `1s` but you can always define your custom duration by adding `duration:[number]s` attribute.
 ``` html
 <!DOCTYPE html>
@@ -216,7 +216,7 @@ Default animation duration is `1s` but you can always define your custom duratio
 </html>
 ```
 
-#### Add Delay
+### Add Delay
 By adding the attribute `delay:[number]s` you can set a delay time to start of an animation.
 ``` html
 <!DOCTYPE html>
@@ -242,7 +242,7 @@ By adding the attribute `delay:[number]s` you can set a delay time to start of a
 </html>
 ```
 
-#### Infinite or Specify The Number of Animation
+### Infinite or Specify The Number of Animation
 The `iteration-count` specifies the number of times an animation should be played. Use `iteration-count: 3` if you want to animate 3 times or use `iteration-count:infinite` which should play the animation with no limit.
 ``` html
 <!DOCTYPE html>
@@ -272,7 +272,7 @@ The `iteration-count` specifies the number of times an animation should be playe
 </html>
 ```
 
-#### Animation Direction
+### Animation Direction
 You can run the animation in reverse direction or alternate cycle **(forward, backward, then again forward)** using `direction` attribute.
 ``` html
 <!DOCTYPE html>
@@ -302,7 +302,7 @@ You can run the animation in reverse direction or alternate cycle **(forward, ba
 </html>
 ```
 
-#### Timing Function
+### Timing Function
 You can add all CSS pre-defined speed curve `ease, ease-in, ease-out, linear` of an animation or define your own values with a `cubic-bezier` function by adding `timing-function` attribute.
 ``` html
 <!DOCTYPE html>
@@ -332,7 +332,7 @@ You can add all CSS pre-defined speed curve `ease, ease-in, ease-out, linear` of
 </html>
 ```
 
-#### Define Top Offset Value
+### Define Top Offset Value
 Set the top animation starting point after it appears on the browser window `data-scrolly-offset-top="300px"`.
 ``` html
 <!DOCTYPE html>
@@ -358,7 +358,7 @@ Set the top animation starting point after it appears on the browser window `dat
 </html>
 ```
 
-#### Define Bottom Offset Value
+### Define Bottom Offset Value
 Like the top offset the `data-scrolly-offset-bottom="500px"` attribute can be used to set the bottom starting point of the animation.
 ``` html
 <!DOCTYPE html>
@@ -384,7 +384,7 @@ Like the top offset the `data-scrolly-offset-bottom="500px"` attribute can be us
 </html>
 ```
 
-#### On Click Animtion
+### On Click Animtion
 Initiate the animation with on click event using by `data-scrolly-click="fadeIn"`.
 ``` html
 <!DOCTYPE html>
@@ -410,7 +410,7 @@ Initiate the animation with on click event using by `data-scrolly-click="fadeIn"
 </html>
 ```
 
-#### Mouse Over Animtion
+### Mouse Over Animtion
 For mouse over animation add the `data-scrolly-mouseover="zoomIn"` attribute
 ``` html
 <!DOCTYPE html>
@@ -436,7 +436,7 @@ For mouse over animation add the `data-scrolly-mouseover="zoomIn"` attribute
 </html>
 ```
 
-#### Mouse Out Animtion
+### Mouse Out Animtion
 Add `data-scrolly-mouseout="fadeInLeft"` attribute to animate on mouse out event.
 ``` html
 <!DOCTYPE html>
@@ -462,7 +462,7 @@ Add `data-scrolly-mouseout="fadeInLeft"` attribute to animate on mouse out event
 </html>
 ```
 
-#### Targeted Object Animate When You Click
+### Targeted Object Animate When You Click
 Targeted Object Animate When You Click: If you want to animate a content by clicking by another one, follow this simple instruction. 
 ``` html
 <!DOCTYPE html>
@@ -490,7 +490,7 @@ Targeted Object Animate When You Click: If you want to animate a content by clic
 </html>
 ```
 
-#### Targeted Object Animate When You Mouse Over
+### Targeted Object Animate When You Mouse Over
 Animate any content while hovering mouse on another one.
 ``` html
 <!DOCTYPE html>
@@ -518,7 +518,7 @@ Animate any content while hovering mouse on another one.
 </html>
 ```
 
-#### Targeted Object Animate When You Mouse Out
+### Targeted Object Animate When You Mouse Out
 Unlike those two follow the instruction below to animate targeted contents while doing mouse out on another one.
 ``` html
 <!DOCTYPE html>
