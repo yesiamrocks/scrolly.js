@@ -82,7 +82,8 @@ We developed the most easier way to work with scroll animation, Just use `data-s
 </h1>
 ```
 
-**Add Delay in Character Animation:** You can add dealy on character animation by adding `data-scrolly-characters="delay:100"` attribute.
+####Add Delay in Character Animation:
+You can add dealy on character animation by adding `data-scrolly-characters="delay:100"` attribute.
 ``` html
 <h1 data-scrolly-characters="sequentially" data-scrolly-characters="delay:100" data-scrolly-down="leSpinInRight" data-scrolly-top="leSpinInLeft">
      I am Awesome. I can animate every characters in a sentence
