@@ -550,8 +550,8 @@ Unlike those two follow the instruction below to animate targeted contents while
 # Advanced Settings
 
 **Scrolly Offset Top** – specifies the distance between the beginning of the object and the beginning of the browser window from top
-* Default value – 0
-* Example value – 20
+* Default value – 0px
+* Example value – 20px
 * Uses – 
 
 ``` html
@@ -563,6 +563,112 @@ Unlike those two follow the instruction below to animate targeted contents while
 </script> 
 ```
 
+**Scrolly Offset Bottom** – specifies the distance between the beginning of the object and the ending of the browser window from bottom
+* Default value – 0px
+* Example value – 20px
+* Uses – 
+
+``` html
+<!DOCTYPE html>
+<script> 
+  scrolly ({ 
+    scrollyOffsetBottom: 20
+  }); 
+</script> 
+```
+
+**Scrolly [OS name] Offset Top** – specifies the distance between the beginning of the object and the beginning of the browser window from top based on OS and devices
+* OS Supports – MAC OS and Windows
+* Default value – 0px
+* Example value – 200px
+* Uses – 
+``` html
+<script> 
+  scrolly ({ 
+    scrollyMacOffsetTop: 200,      /*Setting Offset Top Value for MAC*/
+    scrollyWindowsOffsetTop: 200  /*Setting Offset Top Value for Windows*/
+}); 
+</script> 
+```
+
+**Scrolly [OS Name] Offset Bottom** – specifies the distance between the beginning of the object and the ending of the browser bottom window based on OS and devices
+* OS Supports – MAC OS and Windows
+* Default value – 0px
+* Example value – 200px
+* Uses – 
+``` html
+<script> 
+  scrolly ({ 
+    scrollyMacOffsetBottom: 200,      /*Setting Offset Bottom Value for MAC*/
+    scrollyWindowsOffsetBottom: 200  /*Setting Offset Bottom Value for Windows*/
+ }); 
+</script>  
+```
+
+
+**Scrolly [Device] Offset Top** – specifies the distance between the beginning of the object and the beginning of the browser window from top based on OS and devices
+* Device Supports – Tab and Mobile
+* Default value – 0px
+* Example value – 200px
+* Uses – 
+``` html
+<script> 
+  scrolly ({ 
+    scrollyTabOffsetTop: 200,      /*Setting Offset Top Value for Tab*/
+    scrollyMobileOffsetTop: 200   /*Setting Offset Top Value for Mobile*/
+ }); 
+</script> 
+```
+
+
+**Scrolly [Device Name] Offset Bottom** – specifies the distance between the beginning of the object and the ending of the browser bottom window based on OS and devices
+* Device Supports – Tab and Mobile
+* Default value – 0px
+* Example value – 200px
+* Uses – 
+``` html
+<script> 
+  scrolly ({ 
+    scrollyTabOffsetBottom: 200,      /*Setting Offset Bottom Value for Tab*/
+    scrollyMobileOffsetBottom: 200   /*Setting Offset Bottom Value for Mobile*/
+ }); 
+</script> 
+```
+
+**Scrolly Stop It** – There are several options that you can use to destroy scrolly on certains devices.
+* Default value – false
+* Type – Boolean
+* Device Supports – Large Desktop, Desktop, Tab and Mobile
+* Example value – `mobile: true`
+* Uses – 
+``` html
+<script> 
+  scrolly ({ 
+    scrollyStopIt: {
+        largeDesktop: false,
+        desktop: false,
+        mobile: true,
+        tab: false
+      }
+  }); 
+</script> 
+```
+
+**Scrolly Disable** – you can use `scrollyDisable` to kill scrolly.
+* Default value – false
+* Type – Boolean
+* Example value – true
+* Uses – 
+``` html
+<script> 
+  scrolly ({ 
+    scrollyDisable: true
+  }); 
+</script> 
+```
+
+# Pricing Guide
+ScrollyJS is completely free to use. For any commercial projects, themes or any applications you should have to buy a commercial license. We offer you to a commercial license with two different packages. To learn more please take a look our [support](https://scrollyjs.com/support-policy.html) and [licensing](https://scrollyjs.com/licensing.html) sections.
 
 
 # Why Scrolly.js
