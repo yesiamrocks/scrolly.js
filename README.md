@@ -546,6 +546,25 @@ Unlike those two follow the instruction below to animate targeted contents while
 </html>
 ```
 
+
+# Advanced Settings
+
+**Scrolly Offset Top** – specifies the distance between the beginning of the object and the beginning of the browser window from top
+* Default value – 0
+* Example value – 20
+* Uses – 
+
+``` html
+<!DOCTYPE html>
+<script> 
+  scrolly ({ 
+    scrollyOffsetTop: 20
+  }); 
+</script> 
+```
+
+
+
 # Why Scrolly.js
 Scrolly JS is efficient and flexible JavaScript library for building an interactive and attractive animation with scrolling. Fully responsive, lightweight, powerful and flexible pure JavaScript scroll animation library.
 
