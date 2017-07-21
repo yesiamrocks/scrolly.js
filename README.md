@@ -569,7 +569,6 @@ Unlike those two follow the instruction below to animate targeted contents while
 * Uses – 
 
 ``` html
-<!DOCTYPE html>
 <script> 
   scrolly ({ 
     scrollyOffsetBottom: 20
@@ -667,10 +666,6 @@ Unlike those two follow the instruction below to animate targeted contents while
 </script> 
 ```
 
-# Pricing Guide
-ScrollyJS is completely free to use. For any commercial projects, themes or any applications you should have to buy a commercial license. We offer you to a commercial license with two different packages. To learn more please take a look our [support](https://scrollyjs.com/support-policy.html) and [licensing](https://scrollyjs.com/licensing.html) sections.
-
-
 # Why Scrolly.js
 Scrolly JS is efficient and flexible JavaScript library for building an interactive and attractive animation with scrolling. Fully responsive, lightweight, powerful and flexible pure JavaScript scroll animation library.
 
@@ -691,3 +686,7 @@ A Very easiest scroll animation library which has extensive features to build an
 
 ### No dependency
 Plug and play and ready to implement. No dependency with any third party JavaScript plugin, framework or library.
+
+
+# Pricing Guide
+ScrollyJS is completely free to use. For any commercial projects, themes or any applications you should have to buy a commercial license. We offer you to a commercial license with two different packages. To learn more please take a look our [support](https://scrollyjs.com/support-policy.html) and [licensing](https://scrollyjs.com/licensing.html) sections.
