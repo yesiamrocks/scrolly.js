@@ -555,7 +555,6 @@ Unlike those two follow the instruction below to animate targeted contents while
 * Uses – 
 
 ``` html
-<!DOCTYPE html>
 <script> 
   scrolly ({ 
     scrollyOffsetTop: 20
