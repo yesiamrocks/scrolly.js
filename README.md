@@ -9,6 +9,7 @@ We developed the most easier way to work with scroll animation, Just use `data-s
 # How To Use It?
 ### Include Library
 To get started, just download `scrolly.js` and `cssanimation.css` [download](http://cssanimation.io/). Now include the `cssanimation.css` stylesheet into the head and add `scrolly.js` scripts before the `body` tag
+Or add it directly to your webpage using a CDN: https://rawcdn.githack.com/yesiamrocks/scrolly.js/2a3d10b8065c42ad000859cf38ef55e6fff60973/scrolly.min.js
 ``` html
 <!DOCTYPE html>
 <html lang="en">
